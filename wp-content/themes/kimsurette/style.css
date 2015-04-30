@@ -13,7 +13,11 @@ Tags:
 
 */
 
-
+/*Blue: #61A6DB;
+Orange: #E34025;
+Grey-light: #EFEFE8;
+Grey-medium: #5D5D5D;
+Grey-dark: #3A3A3A;*/
 
 
  /*--------------------------------------------------------------
@@ -84,10 +88,10 @@ dfn {
 	font-style: italic;
 }
 
-h1 {
+/*h1 {
 	font-size: 2em;
 	margin: 0.67em 0;
-}
+}*/
 
 mark {
 	background: #ff0;
@@ -236,9 +240,9 @@ th {
 }
 
 
- /*--------------------------------------------------------------
-Menu
---------------------------------------------------------------*/
+
+/*header*/
+
 .site-title {
 	color: #000;
 	text-decoration: none;
@@ -258,42 +262,191 @@ Menu
 
 }
 
-/*.site-title h1{
-	font-family: Oxygen;
-	font-weight: 300;
-	font-size: 35pt;
-	
-}*/
 
 .site-title a{
 	text-decoration: none;
 	color: #000;
 }
+ /*--------------------------------------------------------------
+Menu
+--------------------------------------------------------------*/
 
 .menu-container{
-	width: 1000px;
+	max-width: 1000px;
+	min-width: 500px;
 	margin: auto;
+
 }
-.menu ul{
-	list-style: none;
+
+
+#cssmenu {
+	height: 37px;
 	float: right;
+	padding: 0;
+	margin: 0;
+	width: auto;
+}
+
+#cssmenu,
+#cssmenu > ul > li > ul > li a:hover {
+	
+}
+#cssmenu > ul {
+	list-style: inside none;
+	padding: 0;
+	margin: 0;
+}
+#cssmenu > ul > li {
+	list-style: inside none;
+	padding: 0;
+	margin: 0;
+	float: left;
+	display: block;
+	position: relative;
+}
+#cssmenu > ul > li > a {
+	outline: none;
+	display: block;
+	position: relative;
+	padding: 12px 20px;
+	text-align: center;
+	text-decoration: none;
+}
+#cssmenu > ul > li > a:hover {
+	color: #E34025;
+}
+#cssmenu > ul > li:first-child > a {
+}
+#cssmenu > ul > li > a:after {
+	content: '';
+	position: absolute;
+	top: -1px;
+	bottom: -1px;
+	right: -2px;
+	z-index: 99;
+}
+
+#cssmenu ul li.has-sub:hover > a:after {
+	top: 0;
+	bottom: 0;
+}
+#cssmenu > ul > li.has-sub > a:before {
+	content: '';
+	position: absolute;
+	top: 18px;
+	right: 6px;
+	border: 5px solid transparent;
+	border-top: 5px solid #ffffff;
+}
+#cssmenu > ul > li.has-sub:hover > a:before {
+	top: 19px;
+}
+#cssmenu ul li.has-sub:hover > a {
+	padding-bottom: 13px;
+	padding-top: 13px;
+	top: -1px;
+	z-index: 999;
+	color: #E34025;
+}
+#cssmenu ul li.has-sub:hover > ul,
+#cssmenu ul li.has-sub:hover > div {
+	display: block;
+}
+#cssmenu ul li.has-sub > a:hover {
+	color: #E34025;
+}
+#cssmenu ul li > ul,
+#cssmenu ul li > div {
+	display: none;
+	width: auto;
+	position: absolute;
+	top: 38px;
+	padding: 10px 0;
+	border-radius: 0 0 5px 5px;
+	z-index: 999;
+}
+#cssmenu ul li > ul {
+/*	width: 200px;
+*/
+list-style: inline;
+	
+}
+#cssmenu ul li > ul li {
+	display: block;
+	list-style: inside none;
+	padding: 0;
+	margin: 0;
+	position: relative;
+}
+#cssmenu ul li > ul li a {
+	outline: none;
+	display: block;
+	position: relative;
+	margin: 0;
+	padding: 8px 20px;
+	color: #3A3A3A;
+	text-decoration: none;
+	background-color: #ffffff;
+
+}
+#cssmenu ul ul a:hover {
+	color: #3A3A3A;
+
+}
+#cssmenu > ul > li.has-sub > a:hover:before {
+	border-top: 5px solid #3A3A3A;
 }
 
 
-.menu li{
-  display: inline;
-  padding: 0 10px; 
-}
-
-.menu li a{
-	 color: #000;
-	 text-decoration: none;
-}
 
 
-.children.menu ul{
-	list-style: none;
+
+
+
+/*Home Page*/
+
+
+.home-title{
+	width: 75%;
+	max-width: 1000px;
+	text-align: center;
+	color: #fff;
+	font-family: Oxygen;
+	font-weight: 400;
+	margin: auto;
+	clear: both;
+	overflow: auto;
+
 }
+
+
+.home-title h1{
+	font-size: 35pt;
+
+
+}
+
+.home-container{
+	background: rgba(227, 64, 37, 1);
+	height: auto;
+	clear: both;
+	overflow: auto;
+	width: 100%
+
+}
+
+.home-box{
+	width: 310px;
+	float: left;
+	margin:10px;
+	background-color: #EFEFE8;
+	text-align: center;
+	padding: 15px 0px;
+	font-size: 20pt;
+}
+
+
+
 
 
  /*--------------------------------------------------------------
@@ -327,15 +480,20 @@ Content
 }
 
 .content-container{
-	width: 1000px;
+	max-width: 1000px;
+	min-width: 500px;
 	margin:25px auto;
 	line-height: 17pt;
+	clear: both;
+
 }
 
 
 .gallery{
 	margin: auto;
 	width: 100%;
+	text-align: center;
+	padding-bottom: 25px;
 
 }
 
@@ -348,6 +506,7 @@ Footer
 footer{
 	width: 1000px;
 	margin: 10px auto 50px auto;
+	clear: both;
 
 }
 

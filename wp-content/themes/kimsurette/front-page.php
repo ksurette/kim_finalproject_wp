@@ -3,16 +3,26 @@
 
 get_header(); ?>
 
-
-
-<h1>I design things for people like you.</h1>
-
-<h3>infographics image |  logos image  |  print design image</h3><br>
-<div class="row">
-  <div class="col-sm-3">.col-md-3</div>
-  <div class="col-sm-6">.col-md-6</div>
-  <div class="col-sm-3">.col-md-3</div>
+<div class="home-container">
+	<div class="home-title">
+		<h1>Hi, I'm Kim. I design things for wonderful people like you. Check out my work! </h1>
+	</div>
 </div>
+
+<div class="content-container">
+<div class="home-box">
+	infographics
+</div>
+
+<div class="home-box">
+	logos
+</div>
+
+<div class="home-box">
+	print design
+</div>
+</div>
+
 
 <?php get_footer(); ?>
  
